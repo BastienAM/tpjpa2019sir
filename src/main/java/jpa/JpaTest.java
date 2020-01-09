@@ -29,5 +29,11 @@ public class JpaTest {
 		//		factory.close();
 	}
 
+	private void createUtilisateur() {
+		Utilisateur u1 = new Utilisateur();
+		Utilisateur u2 = new Utilisateur();
+		Utilisateur u3 = new Utilisateur();
+
+	}
 
 }
