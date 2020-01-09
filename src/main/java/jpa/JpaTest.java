@@ -17,7 +17,6 @@ public class JpaTest {
 
 
 		try {
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -29,11 +28,12 @@ public class JpaTest {
 		//		factory.close();
 	}
 
-	private void createUtilisateur() {
+	private void creationUtilisateur() {
 		Utilisateur u1 = new Utilisateur();
 		Utilisateur u2 = new Utilisateur();
 		Utilisateur u3 = new Utilisateur();
-
+		
+		u1.
 	}
 
 }
