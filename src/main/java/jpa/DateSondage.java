@@ -10,7 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class DateSondage {
@@ -22,6 +25,14 @@ public class DateSondage {
 
 	private List<Reunion_Utilisateur> utilisateurs = new ArrayList<Reunion_Utilisateur>();
 
+	public DateSondage() {}
+	
+	public DateSondage(Date date, Sondage sondage) {
+		super();
+		this.date = date;
+		this.sondage = sondage;
+	}
+
 	@Id
 	@GeneratedValue
 	public long getId() {
@@ -32,6 +43,7 @@ public class DateSondage {
 		this.id = id;
 	}
 
+	@Temporal(TemporalType.TIMESTAMP)
 	public Date getDate() {
 		return date;
 	}
@@ -40,7 +52,7 @@ public class DateSondage {
 		this.date = date;
 	}
 
-	@OneToMany(mappedBy = "datesProposees")
+	@ManyToOne
 	public Sondage getSondage() {
 		return sondage;
 	}

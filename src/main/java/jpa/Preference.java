@@ -16,7 +16,15 @@ public class Preference {
 	
 	private List<Utilisateur> utilisateurs = new ArrayList<Utilisateur>();
 
+	public Preference() {}
 	
+	public Preference(String libelle) {
+		super();
+		this.libelle = libelle;
+	}
+
+
+
 	@Id
 	@GeneratedValue
 	public long getId() {
@@ -32,6 +40,7 @@ public class Preference {
 		this.libelle = libelle;
 	}
 	
+	
 	@ManyToMany(mappedBy = "preferences")
 	public List<Utilisateur> getUtilisateurs() {
 		return utilisateurs;
@@ -40,7 +49,4 @@ public class Preference {
 		this.utilisateurs = utilisateurs;
 	}
 	
-	
-	
-
 }

@@ -20,7 +20,7 @@ public class Utilisateur {
 	private List<Allergie> allergies = new ArrayList<Allergie>();
 	private List<Preference> preferences = new ArrayList<Preference>();
 	private List<Sondage> sondages = new ArrayList<Sondage>();
-	private List<Reunion_Utilisateur> reunionsUtilisateurs = new ArrayList<Reunion_Utilisateur>();
+	//private List<Reunion_Utilisateur> reunionsUtilisateurs = new ArrayList<Reunion_Utilisateur>();
 	
 	public Utilisateur() {}
 
@@ -57,7 +57,7 @@ public class Utilisateur {
 	}
 
 	@ManyToMany
-	@JoinTable(name = "Utilisateur_Allergie", joinColumns = @JoinColumn(name = "allergies"), inverseJoinColumns = @JoinColumn(name = "id"))
+	@JoinTable(name = "Utilisateur_Allergie", joinColumns = @JoinColumn(name = "Utilisateur"), inverseJoinColumns = @JoinColumn(name = "Allergie"))
 	public List<Allergie> getAllergies() {
 		return allergies;
 	}
@@ -67,7 +67,7 @@ public class Utilisateur {
 	}
 
 	@ManyToMany
-	@JoinTable(name = "Utilisateur_Preference", joinColumns = @JoinColumn(name = "preferences"), inverseJoinColumns = @JoinColumn(name = "id"))
+	@JoinTable(name = "Utilisateur_Preference", joinColumns = @JoinColumn(name = "Utilisateur"), inverseJoinColumns = @JoinColumn(name = "Preference"))
 	public List<Preference> getPreferences() {
 		return preferences;
 	}
@@ -84,7 +84,7 @@ public class Utilisateur {
 	public void setSondages(List<Sondage> sondages) {
 		this.sondages = sondages;
 	}
-
+/*
 	@OneToMany
 	public List<Reunion_Utilisateur> getReunionsUtilisateurs() {
 		return reunionsUtilisateurs;
@@ -93,7 +93,7 @@ public class Utilisateur {
 	public void setReunionsUtilisateurs(List<Reunion_Utilisateur> reunionsUtilisateurs) {
 		this.reunionsUtilisateurs = reunionsUtilisateurs;
 	}
-	
+	*/
 	
 
 }

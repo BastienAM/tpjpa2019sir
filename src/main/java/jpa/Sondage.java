@@ -15,10 +15,8 @@ public class Sondage {
 	
 	private long id;
 	private DateSondage dateRetenue;
-	private String lienWeb;
-	
+	private String lienWeb;	
 	private Utilisateur createur;
-	private Reunion reunion;
 	
 	private List<DateSondage> datesProposees = new ArrayList<DateSondage>();
 	
@@ -64,20 +62,12 @@ public class Sondage {
 		this.createur = createur;
 	}
 	
-	@OneToMany
+	@OneToMany(mappedBy = "sondage")
 	public List<DateSondage> getDatesProposees() {
 		return datesProposees;
 	}
 	public void setDatesProposees(List<DateSondage> datesProposees) {
 		this.datesProposees = datesProposees;
 	}
-	
-	public Reunion getReunion() {
-		return reunion;
-	}
-	public void setReunion(Reunion reunion) {
-		this.reunion = reunion;
-	}
-	
 	
 }

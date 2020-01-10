@@ -24,8 +24,14 @@ public class Reunion_Utilisateur {
 	
 	public Reunion_Utilisateur() {}
 	
-	
-	
+	public Reunion_Utilisateur(String lienWeb, String clearCode, Reunion reunion, Utilisateur utilisateur) {
+		super();
+		this.lienWeb = lienWeb;
+		this.clearCode = clearCode;
+		this.reunion = reunion;
+		this.utilisateur = utilisateur;
+	}
+
 	@Id
 	@GeneratedValue
 	public long getId() {
@@ -55,6 +61,7 @@ public class Reunion_Utilisateur {
 	public void setDatesSelectionnees(List<DateSondage> datesSelectionnees) {
 		this.datesSelectionnees = datesSelectionnees;
 	}
+	
 	
 	@ManyToOne
 	public Reunion getReunion() {

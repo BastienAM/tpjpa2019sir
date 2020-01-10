@@ -16,7 +16,12 @@ public class Allergie {
 	
 	private List<Utilisateur> utilisateurs = new ArrayList<Utilisateur>();
 
+	public Allergie() {}
 	
+	public Allergie(String libelle) {
+		super();
+		this.libelle = libelle;
+	}
 	@Id
 	@GeneratedValue
 	public long getId() {
@@ -40,5 +45,4 @@ public class Allergie {
 		this.utilisateurs = utilisateurs;
 	}
 
-	
 }
