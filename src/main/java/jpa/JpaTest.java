@@ -95,20 +95,23 @@ public class JpaTest {
 			ld.add(ds1);
 			ld.add(ds2);
 			ld.add(ds3);
-
+			
+			sondage.setDateRetenue(ds2);
+			
 			sondage.setDatesProposees(ld);
 
 			Reunion reunion1 = new Reunion("reunionA", "ffff",
 					"https://www.google.com/search?q=s&rlz=1C1GCEB_enFR883FR883&oq=s&aqs=chrome..69i57j0l4j69i60.848j0j7&sourceid=chrome&ie=UTF-8");
 			reunion1.setSondage(sondage);
 			
+			int i = 0;
 			for(Utilisateur elem: utilisateurs) {
 				List<Reunion_Utilisateur> reunionsUtilisateurs = new ArrayList<Reunion_Utilisateur>();
-				Reunion_Utilisateur ru = new Reunion_Utilisateur("hugcfxdw", "ADID545", reunion1, elem);
+				Reunion_Utilisateur ru = new Reunion_Utilisateur("hugcfxdw", "ADID54"+i, reunion1, elem);
 				reunionsUtilisateurs.add(ru);
 
-				 //reunion1.setReunionsUtilisateurs(reunionsUtilisateurs);
 				 manager.persist(ru);
+				 i++;
 			 }
 			
 			manager.persist(sondage);

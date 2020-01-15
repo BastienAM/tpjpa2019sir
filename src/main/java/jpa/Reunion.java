@@ -18,7 +18,6 @@ public class Reunion {
 	private String lienPad;
 	
 	private Sondage sondage;
-	//private List<Reunion_Utilisateur> reunionsUtilisateurs = new ArrayList<Reunion_Utilisateur>();
 	
 	public Reunion() {}
 	
@@ -64,14 +63,4 @@ public class Reunion {
 	public void setSondage(Sondage sondage) {
 		this.sondage = sondage;
 	}
-	/*
-	@OneToMany
-	public List<Reunion_Utilisateur> getReunionsUtilisateurs() {
-		return reunionsUtilisateurs;
-	}
-	public void setReunionsUtilisateurs(List<Reunion_Utilisateur> reunionsUtilisateurs) {
-		this.reunionsUtilisateurs = reunionsUtilisateurs;
-	}
-	
-	*/
 }

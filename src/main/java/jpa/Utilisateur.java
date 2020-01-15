@@ -20,7 +20,6 @@ public class Utilisateur {
 	private List<Allergie> allergies = new ArrayList<Allergie>();
 	private List<Preference> preferences = new ArrayList<Preference>();
 	private List<Sondage> sondages = new ArrayList<Sondage>();
-	//private List<Reunion_Utilisateur> reunionsUtilisateurs = new ArrayList<Reunion_Utilisateur>();
 	
 	public Utilisateur() {}
 
@@ -84,16 +83,4 @@ public class Utilisateur {
 	public void setSondages(List<Sondage> sondages) {
 		this.sondages = sondages;
 	}
-/*
-	@OneToMany
-	public List<Reunion_Utilisateur> getReunionsUtilisateurs() {
-		return reunionsUtilisateurs;
-	}
-
-	public void setReunionsUtilisateurs(List<Reunion_Utilisateur> reunionsUtilisateurs) {
-		this.reunionsUtilisateurs = reunionsUtilisateurs;
-	}
-	*/
-	
-
 }
