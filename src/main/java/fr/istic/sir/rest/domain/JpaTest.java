@@ -1,4 +1,4 @@
-package jpa;
+package fr.istic.sir.rest.domain;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -7,6 +7,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceContext;
+
+import fr.istic.sir.rest.dao.EntityManagerHelper;
 
 public class JpaTest {
 

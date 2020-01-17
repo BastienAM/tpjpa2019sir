@@ -1,4 +1,4 @@
-package jpa;
+package fr.istic.sir.rest.domain;
 
 import java.util.ArrayList;
 import java.util.List;

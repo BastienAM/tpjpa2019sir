@@ -1,4 +1,4 @@
-package jpa;
+package fr.istic.sir.rest.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
