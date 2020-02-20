@@ -16,13 +16,20 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
+import org.jboss.logging.Param;
+
 import fr.istic.sir.rest.dao.DaoUtilisateur;
 import fr.istic.sir.rest.dao.EntityManagerHelper;
 import fr.istic.sir.rest.domain.Utilisateur;
 
+@Path("/utilisateur")
 public class UtilisateurService {
 
 	DaoUtilisateur daoUtilisateur;
+	
+	public UtilisateurService() {
+		daoUtilisateur = new DaoUtilisateur();
+	}
 
 	@GET
 	@Path("/utilisateur/{utilisateuremail}")
@@ -45,8 +52,8 @@ public class UtilisateurService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Utilisateur createUtilisateur(Utilisateur u) {
+		System.out.println("Utilisateur email" + u.getEmail());
 		return daoUtilisateur.save(u);
-
 	}
 	
 	@DELETE
